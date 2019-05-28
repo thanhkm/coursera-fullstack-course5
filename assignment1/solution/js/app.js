@@ -14,6 +14,7 @@ function LunchCheckController ($scope) {
     var nbMeals = meals.length;
     if ($scope.dishes === "") {
       $scope.message = "Please enter data first";
+      
     } else if (nbMeals <= 3) {
       $scope.message = "Enjoy!";
     } else {
