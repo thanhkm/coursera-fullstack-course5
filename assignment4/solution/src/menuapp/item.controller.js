@@ -10,7 +10,7 @@ function ItemController($stateParams, MenuDataService) {
 
   console.log("ItemController: ", this);
   itemCtrl.categoryShortName = $stateParams.categoryShortName
-  console.log(itemCtrl.categoryShortName)
+  // console.log(itemCtrl.categoryShortName)
 
   var promise = MenuDataService.getItemsForCategory(itemCtrl.categoryShortName);
   promise.then(function (response) {
