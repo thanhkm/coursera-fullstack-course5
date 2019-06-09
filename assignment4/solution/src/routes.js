@@ -22,20 +22,22 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // categories
   .state('categories', {
     url: '/categories',
-    templateUrl: 'src/templates/categories.template.html'
-    // controller: 'CategoryController as category',
+    templateUrl: 'src/templates/categories.template.html',
+    controller: 'CategoryController as category'
     // resolve: {
     //   items: ['MenuDataService', function (MenuDataService) {
-    //     return MenuDataService.getAllCategories();
+    //     var categories = MenuDataService.getAllCategories();
+    //     console.log(categories);
+    //     return categories;
     //   }]
     // }
   })
 
   // items
   .state('items', {
-    url: '/items',
-    templateUrl: 'src/templates/items.template.html'
-    // controller: 'ItemDetailController as itemDetail',
+    url: '/items/{categoryShortName}',
+    templateUrl: 'src/templates/items.template.html',
+    controller: 'ItemController as itemCtrl'
     // params: {
     //   itemId: null
     // }
